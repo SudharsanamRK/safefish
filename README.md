@@ -32,7 +32,7 @@ A web-based chatbot application that provides fishing safety information, weathe
 ---
 
 ## Project Structure
-
+```
 safefish/
 ├── backend/
 │ ├── server.js # Main Express server
@@ -51,7 +51,7 @@ safefish/
 ├── vite.config.js # Vite configuration
 ├── tailwind.config.js # Tailwind configuration
 └── package.json # Frontend dependencies
-
+```
 ---
 
 ## Setup Instructions
