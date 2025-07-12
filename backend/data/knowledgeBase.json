@@ -1,0 +1,238 @@
+{
+  "safety": [
+    {
+      "question": "What safety equipment should I bring while fishing?",
+      "answer": "Always carry a life jacket, first-aid kit, whistle, flashlight, and a means of communication.",
+      "keywords": [
+        "safety",
+        "equipment",
+        "life jacket",
+        "gear",
+        "kit",
+        "supplies"
+      ]
+    },
+    {
+      "question": "Is it safe to fish during a thunderstorm?",
+      "answer": "No, it's extremely dangerous. Avoid fishing during thunderstorms due to lightning risk.",
+      "keywords": [
+        "thunderstorm",
+        "lightning",
+        "weather",
+        "safety",
+        "storm"
+      ]
+    },
+    {
+      "question": "What to do if someone falls overboard while fishing?",
+      "answer": "Shout for help, throw a flotation device, and try to bring them back without jumping in unless trained.",
+      "keywords": [
+        "man overboard",
+        "emergency",
+        "fall",
+        "rescue",
+        "safety"
+      ]
+    }
+  ],
+  "regulations": [
+    {
+      "question": "Do I need a fishing license in Tamil Nadu?",
+      "answer": "Yes, you typically need a license. Check with the local fisheries department.",
+      "keywords": [
+        "license",
+        "permit",
+        "Tamil Nadu",
+        "fishing law"
+      ]
+    },
+    {
+      "question": "What are fishing bag limits?",
+      "answer": "Bag limits restrict how many fish you can catch and keep in one day.",
+      "keywords": [
+        "bag limit",
+        "rules",
+        "regulations",
+        "daily limit"
+      ]
+    },
+    {
+      "question": "Are there size limits for fish?",
+      "answer": "Yes, certain species must be above minimum size before keeping. Check local regulations.",
+      "keywords": [
+        "fish size",
+        "limit",
+        "minimum",
+        "catch",
+        "legal"
+      ]
+    }
+  ],
+  "equipment": [
+    {
+      "question": "What kind of rod is best for beginners?",
+      "answer": "A medium-action spinning rod is ideal for beginners due to its versatility.",
+      "keywords": [
+        "rod",
+        "beginner",
+        "equipment",
+        "fishing pole",
+        "gear"
+      ]
+    },
+    {
+      "question": "What's the use of a fishing reel?",
+      "answer": "A reel stores and releases fishing line, helping cast and retrieve fish.",
+      "keywords": [
+        "reel",
+        "line",
+        "equipment",
+        "gear"
+      ]
+    },
+    {
+      "question": "Do I need a fish finder?",
+      "answer": "Not essential, but a fish finder can improve catch rate by locating fish.",
+      "keywords": [
+        "fish finder",
+        "electronics",
+        "depth",
+        "equipment"
+      ]
+    }
+  ],
+  "techniques": [
+    {
+      "question": "What is bait fishing?",
+      "answer": "Bait fishing uses natural bait like worms or small fish to attract target fish.",
+      "keywords": [
+        "bait",
+        "natural bait",
+        "fishing method",
+        "worms",
+        "hooks"
+      ]
+    },
+    {
+      "question": "What is trolling in fishing?",
+      "answer": "Trolling involves dragging lures or bait behind a moving boat.",
+      "keywords": [
+        "trolling",
+        "boat",
+        "technique",
+        "dragging",
+        "lures"
+      ]
+    },
+    {
+      "question": "How does fly fishing work?",
+      "answer": "Fly fishing uses lightweight lures and special rods to mimic insects on water.",
+      "keywords": [
+        "fly fishing",
+        "technique",
+        "casting",
+        "insects"
+      ]
+    }
+  ],
+  "marine_life": [
+    {
+      "question": "What fish species are common in coastal India?",
+      "answer": "Species like mackerel, sardines, tuna, and pomfrets are common.",
+      "keywords": [
+        "fish species",
+        "coastal",
+        "India",
+        "marine life"
+      ]
+    },
+    {
+      "question": "Are jellyfish dangerous?",
+      "answer": "Some jellyfish can sting. Avoid contact and seek medical help if stung.",
+      "keywords": [
+        "jellyfish",
+        "sting",
+        "dangerous",
+        "marine"
+      ]
+    },
+    {
+      "question": "What is the difference between freshwater and saltwater fish?",
+      "answer": "Freshwater fish live in rivers/lakes, saltwater fish in oceans/seas.",
+      "keywords": [
+        "freshwater",
+        "saltwater",
+        "difference",
+        "fish",
+        "habitat"
+      ]
+    }
+  ],
+  "weather": [
+    {
+      "question": "Is wind bad for fishing?",
+      "answer": "Strong wind can make fishing harder and more dangerous. Check forecast.",
+      "keywords": [
+        "wind",
+        "weather",
+        "conditions",
+        "safe"
+      ]
+    },
+    {
+      "question": "What is the best time of day to fish?",
+      "answer": "Early morning and late evening are usually best for fish activity.",
+      "keywords": [
+        "time",
+        "morning",
+        "evening",
+        "fish",
+        "activity"
+      ]
+    },
+    {
+      "question": "Can I fish during rain?",
+      "answer": "Light rain is okay, but avoid fishing during heavy rain and lightning.",
+      "keywords": [
+        "rain",
+        "storm",
+        "fishing",
+        "safe",
+        "weather"
+      ]
+    }
+  ],
+  "misc": [
+    {
+      "question": "Can I eat the fish I catch?",
+      "answer": "Yes, if it's legal and safe. Check for advisories and clean properly.",
+      "keywords": [
+        "eat",
+        "catch",
+        "safe",
+        "food",
+        "fish"
+      ]
+    },
+    {
+      "question": "Is fishing allowed during monsoon season?",
+      "answer": "Many areas restrict fishing during monsoon to protect breeding seasons.",
+      "keywords": [
+        "monsoon",
+        "fishing ban",
+        "season",
+        "regulations"
+      ]
+    },
+    {
+      "question": "How do I report illegal fishing?",
+      "answer": "Contact your local fisheries department or coast guard.",
+      "keywords": [
+        "illegal fishing",
+        "report",
+        "poaching",
+        "authority"
+      ]
+    }
+  ]
+}
