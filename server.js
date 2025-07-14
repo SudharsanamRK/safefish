@@ -5,36 +5,37 @@ const chatbotRoutes = require('./routes/chatbot');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// ✅ Fixed CORS: allow both localhost & Vercel frontend URLs
 const allowedOrigins = [
-  'http://localhost:5173',                   // Svelte dev
-  'http://localhost:3000',                   // Alt dev
-  'https://safefish-public-metc92hmg-sudharsanamrks-projects.vercel.app',
-  'https://safefish.vercel.app'
+  'http://localhost:5173',
+  'http://localhost:3000',
+  'https://safefish.vercel.app',
+  'https://safefish-public.vercel.app'
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin) return callback(null, true); // allow no origin (curl, Postman, etc.)
-    if (allowedOrigins.includes(origin)) return callback(null, true);
-    return callback(new Error('Not allowed by CORS'));
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      console.log('❌ Blocked by CORS:', origin);
+      return callback(new Error('Not allowed by CORS'));
+    }
   },
-  credentials: true,
+  credentials: true
 }));
 
-// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Logging middleware
 app.use((req, res, next) => {
   console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
   next();
 });
 
-// Routes
 app.use('/api', chatbotRoutes);
 
-// Root endpoint
 app.get('/', (req, res) => {
   res.json({
     message: 'SafeFish Chatbot API',
@@ -47,7 +48,6 @@ app.get('/', (req, res) => {
   });
 });
 
-// 404 handler
 app.use('*', (req, res) => {
   res.status(404).json({
     error: 'Endpoint not found',
@@ -55,20 +55,16 @@ app.use('*', (req, res) => {
   });
 });
 
-// Global error handler
 app.use((err, req, res, next) => {
   console.error('Global error:', err.message);
   res.status(500).json({
     error: 'Internal server error',
-    message: err.message || 'Something went wrong on our end'
+    message: err.message || 'Something went wrong'
   });
 });
 
-// Start server
 app.listen(PORT, () => {
-  console.log(`🐟 SafeFish API running on port ${PORT}`);
-  console.log(`📡 Health check: http://localhost:${PORT}/api/health`);
-  console.log(`🤖 Chat endpoint: http://localhost:${PORT}/api/chat`);
+  console.log(`✅ SafeFish backend running on port ${PORT}`);
 });
 
 module.exports = app;
