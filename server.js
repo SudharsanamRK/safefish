@@ -5,24 +5,20 @@ const chatbotRoutes = require('./routes/chatbot');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// ✅ CORS configuration
 const allowedOrigins = [
   'http://localhost:5173',                   // Svelte dev
   'http://localhost:3000',                   // Alt dev
-  'https://safefish-public-metc92hmg-sudharsanamrks-projects.vercel.app'  // ✅ Your Vercel frontend
+  'https://safefish-public-metc92hmg-sudharsanamrks-projects.vercel.app',
+  'https://safefish.vercel.app'
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    } else {
-      return callback(new Error('CORS not allowed from this origin: ' + origin));
-    }
+    if (!origin) return callback(null, true); // allow no origin (curl, Postman, etc.)
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    return callback(new Error('Not allowed by CORS'));
   },
-  credentials: true
+  credentials: true,
 }));
 
 // Middleware
