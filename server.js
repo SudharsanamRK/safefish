@@ -5,12 +5,27 @@ const chatbotRoutes = require('./routes/chatbot');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Middleware
+// ✅ CORS configuration
+const allowedOrigins = [
+  'http://localhost:5173',                   // Svelte dev
+  'http://localhost:3000',                   // Alt dev
+  'https://safefish-public-metc92hmg-sudharsanamrks-projects.vercel.app'  // ✅ Your Vercel frontend
+];
+
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'], // Common Svelte dev ports
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('CORS not allowed from this origin: ' + origin));
+    }
+  },
   credentials: true
 }));
 
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -46,10 +61,10 @@ app.use('*', (req, res) => {
 
 // Global error handler
 app.use((err, req, res, next) => {
-  console.error('Global error:', err);
+  console.error('Global error:', err.message);
   res.status(500).json({
     error: 'Internal server error',
-    message: 'Something went wrong on our end'
+    message: err.message || 'Something went wrong on our end'
   });
 });
 
