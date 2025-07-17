@@ -5,13 +5,13 @@ const chatbotRoutes = require('./routes/chatbot');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// ✅ Fixed CORS: allow both localhost & Vercel frontend URLs
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:3000',
   'https://safefish.vercel.app',
   'https://safefish-public.vercel.app'
 ];
+
 
 app.use(cors({
   origin: function (origin, callback) {
