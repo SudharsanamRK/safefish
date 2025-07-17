@@ -8,9 +8,11 @@ const PORT = process.env.PORT || 3001;
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:3000',
+  'https://safefish-public.vercel.app',
   'https://safefish.vercel.app',
-  'https://safefish-public.vercel.app'
+  'https://safefish-public-metc92hmg-sudharsanamrks-projects.vercel.app'
 ];
+
 
 
 const cors = require('cors');
