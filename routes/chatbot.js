@@ -149,4 +149,12 @@ router.get('/health', (req, res) => {
   });
 });
 
+// ✅ Add CORS headers manually (important for Render + Vercel)
+router.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // You can replace '*' with your Vercel frontend if needed
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
+
 module.exports = router;
