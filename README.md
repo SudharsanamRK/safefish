@@ -241,6 +241,11 @@ Powered by **Fuse.js**:
 
 ---
 
+## Ouput
+
+<img width="1919" height="973" alt="image" src="https://github.com/user-attachments/assets/ecdf4ce1-fa96-4774-bb7a-c46f103640ff" />
+
+
 ## Contributing
 
 1. **Fork** the repository  
